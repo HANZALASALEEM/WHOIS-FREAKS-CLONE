@@ -383,7 +383,7 @@ li.signIn_list:hover img {
 	transform: none;
 	transition-delay: 0.3s;
 }
-.utility_container h2 {
+.utility_container h1 {
 	color: #b22222;
 }
 .utility_inner_container {
@@ -413,6 +413,9 @@ li.signIn_list:hover img {
 	position: relative;
 	transition: margin-top ease-in 0.4s;
 }
+.utility_slideUp_div h2 {
+	color: #b22222;
+}
 .utility_inner_container:hover img {
 	background-color: #6b0000;
 }
@@ -432,6 +435,155 @@ li.signIn_list:hover img {
 }
 
 /* Core Feature Container */
+.core_feature_container {
+	width: 70%;
+	background-color: transparent;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 10px auto;
+	padding: 30px 20px;
+	margin-top: 100px;
+}
+.core_feature_container_heading {
+	color: #b22222;
+	text-align: center;
+}
+.core_feature_inner_container {
+	width: 90%;
+	background-color: transparent;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	margin: 10px auto;
+	padding: 30px 20px;
+	margin-top: 50px;
+}
+.core_feature_inner_container div {
+	width: 50%;
+}
+.core_feature_inner_container div h2 {
+	color: #b22222;
+	text-align: left;
+}
+.core_feature_inner_container div p {
+	color: #a0522d;
+	text-align: justify;
+}
+.core_feature_inner_container img {
+	width: 50%;
+}
+
+/* Common use cases container  */
+.common_use_cases_container {
+	width: 70%;
+	background-color: transparent;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 10px auto;
+	border-radius: 25px;
+	padding: 30px 20px;
+	border-width: 10px;
+	border-color: rgb(0, 0, 0);
+	box-shadow: 0.5px 0.5px 2px 0.5px gray;
+	margin-top: 50px;
+}
+.common_use_cases_container_heading {
+	color: #b22222;
+	text-align: center;
+}
+.common_use_cases_inner_container {
+	width: 90%;
+	background-color: transparent;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	margin: 10px auto;
+	border-radius: 25px;
+	padding: 30px 20px;
+	border-width: 10px;
+	border-color: rgb(0, 0, 0);
+	box-shadow: 0.5px 0.5px 2px 0.5px gray;
+	margin-top: 50px;
+}
+.common_use_cases_inner_cards_container {
+	width: 250px;
+	background-color: transparent;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 25px;
+	padding: 30px 20px;
+	box-shadow: 0.5px 0.5px 10px 1px gray;
+	margin-top: 50px;
+	perspective: 1000px;
+}
+.common_use_cases_inner_cards_container_inner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.999s;
+}
+.common_use_cases_inner_cards_container:hover
+	.common_use_cases_inner_cards_container_inner {
+	transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.card-front {
+	background-color: #6a2c70;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	border: 10px solid #6a2c70;
+	border-radius: 10px;
+	justify-content: center;
+	font-size: 24px;
+	transform: rotateY(0deg);
+}
+
+.card-back {
+	background-color: #f08a5d;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	border: 10px solid #f08a5d;
+	border-radius: 10px;
+	justify-content: center;
+	font-size: 24px;
+	transform: rotateY(180deg);
+}
+
+.common_use_cases_inner_cards_container_image {
+	width: 250px;
+	height: 250px;
+	z-index: -1;
+	position: absolute;
+	opacity: 0.1;
+}
+.common_use_cases_inner_cards_container_heading {
+	font-size: 22px;
+	color: #b22222;
+	text-align: center;
+	font-weight: bold;
+}
 @media only screen and (max-width: 1100px) {
 	.navbar_container div ul li {
 		display: none;
@@ -512,5 +664,31 @@ li.signIn_list:hover img {
 		width: 100%;
 		margin-top: 10px;
 		margin-bottom: 10px;
+	}
+
+	/* Core Feature Container */
+	.core_feature_inner_container {
+		justify-content: center;
+		flex-direction: column;
+	}
+	.core_feature_inner_container div {
+		width: 100%;
+	}
+	.core_feature_inner_container img {
+		width: 80%;
+	}
+}
+@media only screen and (max-width: 715px) {
+	/* Utility Container */
+	.utility_inner_container {
+		width: 90%;
+	}
+	.utility_inner_container img {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.utility_slideUp_div {
+		width: 100%;
 	}
 }
