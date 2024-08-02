@@ -504,15 +504,12 @@ li.signIn_list:hover img {
 	background-color: transparent;
 	height: auto;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: center;
 	flex-direction: row;
 	margin: 10px auto;
 	border-radius: 25px;
 	padding: 30px 20px;
-	border-width: 10px;
-	border-color: rgb(0, 0, 0);
-	box-shadow: 0.5px 0.5px 2px 0.5px gray;
 	margin-top: 50px;
 }
 .common_use_cases_inner_cards_container {
@@ -527,63 +524,106 @@ li.signIn_list:hover img {
 	box-shadow: 0.5px 0.5px 10px 1px gray;
 	margin-top: 50px;
 	perspective: 1000px;
-}
-.common_use_cases_inner_cards_container_inner {
-	width: 100%;
-	height: 100%;
 	position: relative;
 	transform-style: preserve-3d;
 	transition: transform 0.999s;
 }
-.common_use_cases_inner_cards_container:hover
-	.common_use_cases_inner_cards_container_inner {
+.common_use_cases_inner_cards_container:hover {
 	transform: rotateY(180deg);
 }
-.card-front,
-.card-back {
+.common_use_cases_inner_cards_container_front,
+.common_use_cases_inner_cards_container_back {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	backface-visibility: hidden;
 }
-
-.card-front {
-	background-color: #6a2c70;
+.common_use_cases_inner_cards_container_front {
 	color: #fff;
 	display: flex;
 	align-items: center;
-	border: 10px solid #6a2c70;
 	border-radius: 10px;
 	justify-content: center;
 	font-size: 24px;
 	transform: rotateY(0deg);
 }
-
-.card-back {
-	background-color: #f08a5d;
+.common_use_cases_inner_cards_container_back {
 	color: #fff;
 	display: flex;
 	align-items: center;
-	border: 10px solid #f08a5d;
+
 	border-radius: 10px;
 	justify-content: center;
 	font-size: 24px;
 	transform: rotateY(180deg);
 }
-
-.common_use_cases_inner_cards_container_image {
+.common_use_cases_inner_cards_container img {
 	width: 250px;
 	height: 250px;
 	z-index: -1;
 	position: absolute;
 	opacity: 0.1;
 }
-.common_use_cases_inner_cards_container_heading {
-	font-size: 22px;
+.common_use_cases_inner_cards_container h3 {
 	color: #b22222;
 	text-align: center;
-	font-weight: bold;
 }
+.common_use_cases_inner_cards_container p {
+	color: #b22222;
+	text-align: justify;
+	font-size: 18px;
+	width: 90%;
+	line-height: 25px;
+}
+
+/* Footer */
+.footer_svg {
+	margin-bottom: -10px;
+}
+.footer {
+	background-color: #000000;
+	width: 100vw;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+}
+.footer_row {
+	width: 50%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: row;
+}
+.logo_in_footer {
+	width: 100px;
+	height: 100px;
+}
+.footer_colomn {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	width: 50%;
+}
+.footer_colomn h2 {
+	color: #ffffff;
+}
+.footer_colomn ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	padding-left: 0px;
+}
+.footer_colomn ul li {
+	color: #ffffff;
+	padding: 10px 10px;
+}
+.footer_colomn ul li a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
 @media only screen and (max-width: 1100px) {
 	.navbar_container div ul li {
 		display: none;
@@ -677,6 +717,22 @@ li.signIn_list:hover img {
 	.core_feature_inner_container img {
 		width: 80%;
 	}
+
+	/* Common Use Case Container  */
+	.common_use_cases_inner_container {
+		flex-direction: column;
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.footer {
+		flex-direction: column;
+	}
+	.footer_row {
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
 }
 @media only screen and (max-width: 715px) {
 	/* Utility Container */
@@ -689,6 +745,14 @@ li.signIn_list:hover img {
 		padding-right: 0px;
 	}
 	.utility_slideUp_div {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.footer_row {
+		flex-direction: column;
+	}
+	.footer_colomn {
 		width: 100%;
 	}
 }
