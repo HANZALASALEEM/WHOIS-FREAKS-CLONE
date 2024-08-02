@@ -44,6 +44,9 @@ body {
 	justify-content: space-around;
 	overflow: hidden;
 	z-index: 20;
+	left: 0;
+	right: 0;
+	box-shadow: 2px 2px 10px 2px black;
 }
 .logo_image {
 	width: 100px;
@@ -137,7 +140,7 @@ li.signIn_list:hover img {
 	align-items: center;
 	flex-direction: column;
 }
-.small_screen_menu ul li {
+.small_screen_menu > ul li {
 	width: 90%;
 	background-color: rgb(247, 237, 221);
 	text-align: center;
@@ -269,6 +272,15 @@ li.signIn_list:hover img {
 	margin-left: 80px;
 	border-radius: 10px;
 	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+.intersection_observer_line_icon {
+	width: 20px;
+	height: 20px;
+	margin-top: -25px;
+	/* box-shadow: 1px 1px 10px 1px #b22222; */
+	filter: drop-shadow(0 0 0.75rem #b22222);
 }
 .portfolio_container {
 	height: 170px;
@@ -376,8 +388,8 @@ li.signIn_list:hover img {
 	width: 100px;
 	height: 100px;
 	position: absolute;
-	/* bottom: 0; */
-	/* right: 0; */
+	bottom: 0;
+	right: 0;
 	z-index: -1;
 }
 
