@@ -122,12 +122,13 @@ li.signIn_list:hover img {
 	position: fixed;
 	border-radius: 15px;
 	display: none;
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
+	/* left: 0;
+	right: 0; */
+	/* margin-left: auto;
+	margin-right: auto; */
 	box-shadow: 2px 2px 10px 1px gray;
 	z-index: 20;
+	margin-left: 20px;
 }
 .small_screen_menu ul {
 	display: flex;
@@ -169,7 +170,7 @@ li.signIn_list:hover img {
 	align-items: flex-start;
 	justify-content: center;
 	display: flex;
-	padding: 10px 20px;
+	padding: 10px 60px;
 	flex-direction: column;
 	padding-top: 120px;
 }
@@ -252,6 +253,22 @@ li.signIn_list:hover img {
 	width: 200px;
 	height: 120px;
 	padding-left: 100px;
+}
+
+/* WHOIS Portfolio Container */
+.line {
+	transition: all 0.8s;
+	opacity: 0;
+	transform: translateY(50px);
+}
+.intersection_observer_line {
+	width: 10px;
+	/* background-color: #9b0101; */
+	background-image: linear-gradient(#fdc3c3, #9b0101);
+	/* height: 200px; */
+	margin-left: 80px;
+	border-radius: 10px;
+	margin-top: 20px;
 }
 .portfolio_container {
 	height: 170px;
@@ -354,6 +371,14 @@ li.signIn_list:hover img {
 	color: #fbe5d2;
 	text-align: justify;
 	width: 85%;
+}
+.domain_container_icon {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	/* bottom: 0; */
+	/* right: 0; */
+	z-index: -1;
 }
 
 /* Utility Container */

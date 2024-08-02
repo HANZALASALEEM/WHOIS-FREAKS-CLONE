@@ -64,32 +64,6 @@ right_x_card_appear.forEach((entry) => observer.observe(entry));
 const utility_container = document.querySelector(".opacity_0_to_1");
 observer.observe(utility_container);
 
-function changeContentOfUseCaseCard1() {
-	setTimeout(() => {
-		document.getElementById(
-			"common_use_cases_inner_cards_container_first_image"
-		).src = "src/images/globe.png";
-		title.innerHTML =
-			"Get the details of business location and contact information of a company, organization, or individual with a domain name that is operating a website or other publicly accessible web services using a domain name, for commercial or other purposes.";
-		title.style.fontSize = "16px";
-		title.style.fontWeight = "normal";
-		title.style.textAlign = "justify";
-	}, 1000);
-	const title = document.getElementById(
-		"common_use_cases_inner_cards_container_first_heading"
-	);
-}
-function revertContentOfUseCaseCard1() {
-	setTimeout(() => {
-		document.getElementById(
-			"common_use_cases_inner_cards_container_first_image"
-		).src = "src/images/globalization.png";
-	});
-	const title = document.getElementById(
-		"common_use_cases_inner_cards_container_first_heading"
-	);
-	title.innerHTML = "Real World Identity";
-	title.style.fontSize = "22px";
-	title.style.fontWeight = "bold";
-	title.style.textAlign = "center";
-}
+// Right Cards Intersection Observer
+const line = document.querySelectorAll(".line");
+line.forEach((entry) => observer.observe(entry));
